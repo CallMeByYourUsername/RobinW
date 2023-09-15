@@ -15,41 +15,44 @@
 </head>
 
 <body>
-    <header class="header">
-     
+    <div class="header__intro__background">
+        <header class="header">
+
             <div class="header__inner">
                 <div class="header__logo">
-                    <img class="logo__img" src="images/header/Logo.png" alt="">
+                    <img class="header__img" src="images/header/Logo.png" alt="">
                 </div>
 
                 <nav class="nav">
+                    <button class="nav-toggle" type="button">
+                        <span class="nav-toggle__item">Menu</span>
+                    </button>
                     <a class="nav__link" href="#">Experience</a>
                     <a class="nav__link" href="#">Work</a>
                     <a class="nav__link" href="#">Photography</a>
                     <a class="nav__link" href="#">Contact</a>
                 </nav>
             </div>
-        
-
-    </header>
+        </header>
 
 
-    <div class="intro">
+        <div class="intro">
 
-        <div class="intro__info">
-            <div class="intro__photo">
-                <img src="images/intro/intro_photo.jpg" alt="" height="650" width="750">
+            <div class="intro__info">
+                <div class="intro__photo">
+                    <img class="intro__image" src="images/intro/intro_photo.jpg" alt="" height="650" width="750">
+                </div>
+                <div class="intro__title">
+                    <h1>I’m Robin Williams. <br> A Product Designer </h1>
+                    <h2 class="intro__title-gray">based in Italy.</h2>
+                    <p class="intro__text">I’m probably the most passionate designer you will ever get to work with. If
+                        you
+                        have a great
+                        project that needs some amazing skills, I’m your guy.</p>
+                </div>
             </div>
-            <div class="intro__title">
-                <h1>I’m Robin Williams. <br> A Product Designer </h1>
-                <h1 class="intro__title-gray">based in Italy.</h1>
-                <div class="intro__text">I’m probably the most passionate designer you will ever get to work with. If
-                    you
-                    have a great
-                    project that needs some amazing skills, I’m your guy.</div>
-            </div>
+
         </div>
-
     </div>
 
     <div class="container">
@@ -69,19 +72,19 @@
             <div class="works">
                 <div class="works__item">
                     <div class="works__number">01</div>
-                    <div class="works__title"> <span class="colortext-1">Google</span>, Interaction Designer</div>
+                    <div class="works__title"> <span class="text-color_green">Google</span>, Interaction Designer</div>
                     <p class="works__desc">I currently am the lead designer on the interaction design team for
                         Google Play.</p>
                 </div>
                 <div class="works__item">
                     <div class="works__number">02</div>
-                    <div class="works__title"><span class="colortext-2">Facebook</span>, Product Designer</div>
+                    <div class="works__title"><span class="text-color_blue">Facebook</span>, Product Designer</div>
                     <p class="works__desc">I’ve worked on a wide variety of internal tools for facebook over the
                         past 6 years.</p>
                 </div>
                 <div class="works__item">
                     <div class="works__number">03</div>
-                    <div class="works__title"><span class="colortext-3">Dribbble</span>, Graphic Designer</div>
+                    <div class="works__title"><span class="text-color_red">Dribbble</span>, Graphic Designer</div>
                     <p class="works__desc">I started my design career with Dribbble. I was incharge of creating
                         illustrations for the platform.</p>
                 </div>
@@ -171,18 +174,18 @@
                     <div class="section__title">Work that I’ve done for the past 8 years</div>
                 </section>
                 <div class="project__card">
-                    <div class="project__photo">
-                        <img src="images/projects/project1.jpg" alt="">
-                    </div>
+
+                    <img class="project__photo" src="images/projects/project1.jpg" alt="">
+
                     <div class="project__title">Restaurant Website Design</div>
                     <p class="project__text">I worked with the guys at CBRE to redesign their entire website and mobile
                         app fro both Android and iOS. This project lasted for 4 months and was a very challenging one.
                     </p>
                 </div>
                 <div class="project__card">
-                    <div class="project__photo">
-                        <img src="images/projects/project2.jpg" alt="">
-                    </div>
+
+                    <img class="project__photo" src="images/projects/project2.jpg" alt="">
+
                     <div class="project__title">Restaurant Website Design</div>
                     <p class="project__text">I worked with the guys at CBRE to redesign their entire website and mobile
                         app fro both Android and iOS. This project lasted for 4 months and was a very challenging one.
@@ -191,18 +194,18 @@
             </div>
             <div class="project__column">
                 <div class="project__card">
-                    <div class="project__photo">
-                        <img src="images/projects/project3.jpg" alt="">
-                    </div>
+
+                    <img class="project__photo" src="images/projects/project3.jpg" alt="">
+
                     <div class="project__title">Restaurant Website Design</div>
                     <p class="project__text">I worked with the guys at CBRE to redesign their entire website and mobile
                         app fro both Android and iOS. This project lasted for 4 months and was a very challenging one.
                     </p>
                 </div>
                 <div class="project__card">
-                    <div class="project__photo">
-                        <img src="images/projects/project4.jpg" alt="">
-                    </div>
+
+                    <img class="project__photo" src="images/projects/project4.jpg" alt="">
+
                     <div class="project__title">Restaurant Website Design</div>
                     <p class="project__text">I worked with the guys at CBRE to redesign their entire website and mobile
                         app fro both Android and iOS. This project lasted for 4 months and was a very challenging one.
@@ -212,6 +215,8 @@
             </div>
         </div>
     </div>
+
+
 
     <div class="instagram">
         <div class="instagram__item">
@@ -299,11 +304,11 @@
                 <a class="photo__nav" href="#">India</a>
                 <a class="photo__nav" href="#">Brazil</a>
             </div>
-            <div class="photo__images">
-                <img src="images/photography/photo1.png" alt="">
-                <img src="images/photography/photo2.png" alt="">
-                <img src="images/photography/photo3.png" alt="">
-                <img src="images/photography/photo4.png" alt="">
+            <div class="photo__container">
+                <img class="photo__images" src="images/photography/photo1.png" alt="">
+                <img class="photo__images" src="images/photography/photo2.png" alt="">
+                <img class="photo__images" src="images/photography/photo3.png" alt="">
+                <img class="photo__images" src="images/photography/photo4.png" alt="">
             </div>
 
         </div>
@@ -321,19 +326,19 @@
                 <div class="form__item">
                     <div class="form__title">Name</div>
                     <form class="form" action="/">
-                        <input class="form__input" type="text">
+                        <input class="form__input" type="text" placeholder="Your name...">
                     </form>
                 </div>
                 <div class="form__item">
                     <div class="form__title">Email</div>
                     <form class="form" action="/">
-                        <input class="form__input" type="text">
+                        <input class="form__input" type="text" placeholder="Your email...">
                     </form>
                 </div>
                 <div class="form__item">
                     <div class="form__title">Message</div>
                     <form class="form" action="/">
-                        <textarea class="form__textarea"></textarea>
+                        <textarea class="form__textarea" placeholder="Write a message..."></textarea>
 
                     </form>
                     <button class="subscribe__btn" type="submit">Let’s get started</button>
@@ -345,41 +350,43 @@
 
 
     <footer class="footer">
-        <div class="footer__columns">
-            <div class="footer__item">
-                <div class="footer__logo">
-                    <img src="images/footer/Robin.svg" alt="">
-                </div>
-                <div class="footer__icons">
-                    <img class="footer__icon" src="images/footer/icon1.svg" alt="">
-                    <img class="footer__icon" src="images/footer/icon2.svg" alt="">
-                    <img class="footer__icon" src="images/footer/icon3.svg" alt="">
-                </div>
-            </div>
-            <div class="footer__links">
-                <div class="links__column">
-                    <div class="footer__link">
-                        <a class="footer__nav" href="#">Home</a>
+        <div class="container__footer">
+            <div class="footer__columns">
+                <div class="footer__item">
+                    <div class="footer__logo">
+                        <img src="images/footer/Robin.svg" alt="">
                     </div>
-                    <div class="footer__link">
-                        <a class="footer__nav" href="#">About</a>
-                    </div>
-                    <div class="footer__link">
-                        <a class="footer__nav" href="#">Work</a>
-                    </div>
-                    <div class="footer__link">
-                        <a class="footer__nav" href="#">Process</a>
+                    <div class="footer__icons">
+                        <img class="footer__icon" src="images/footer/icon1.svg" alt="">
+                        <img class="footer__icon" src="images/footer/icon2.svg" alt="">
+                        <img class="footer__icon" src="images/footer/icon3.svg" alt="">
                     </div>
                 </div>
-                <div class="links__column">
-                    <div class="footer__link">
-                        <a class="footer__nav" href="#">Store</a>
+                <div class="footer__links">
+                    <div class="links__column">
+                        <div class="footer__link">
+                            <a class="footer__nav" href="#">Home</a>
+                        </div>
+                        <div class="footer__link">
+                            <a class="footer__nav" href="#">About</a>
+                        </div>
+                        <div class="footer__link">
+                            <a class="footer__nav" href="#">Work</a>
+                        </div>
+                        <div class="footer__link">
+                            <a class="footer__nav" href="#">Process</a>
+                        </div>
                     </div>
-                    <div class="footer__link">
-                        <a class="footer__nav" href="#">Blog</a>
-                    </div>
-                    <div class="footer__link">
-                        <a class="footer__nav" href="#">Reading List</a>
+                    <div class="links__column">
+                        <div class="footer__link">
+                            <a class="footer__nav" href="#">Store</a>
+                        </div>
+                        <div class="footer__link">
+                            <a class="footer__nav" href="#">Blog</a>
+                        </div>
+                        <div class="footer__link">
+                            <a class="footer__nav" href="#">Reading List</a>
+                        </div>
                     </div>
                 </div>
             </div>
