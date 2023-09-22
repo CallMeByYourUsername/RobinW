@@ -16,6 +16,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+h1 {
+    font-size: 70px;
+}
+
 p {
     font-size: 18px;
     color: #8491A0;
@@ -23,56 +27,78 @@ p {
 
 
 /*Container*/
+
+
 .container {
     width: 100%;
-    max-width: 1230px;
+    max-width: 1300px;
     margin: 0 auto;
-    margin-top: 120px;
+
+    padding-top: 120px;
 }
 
+
+.container__footer {
+    margin-top: 0;
+}
+
+
 /*Intro*/
+
+
+.header__intro__background{
+    background: url(../images/header/backgroud.png);
+    background-position: top right;
+
+    background-repeat: no-repeat;
+}
 
 .intro {
     width: 100%;
     min-height: 100vh;
     display: flex;
-    background: url(../images/header/backgroud.png);
-    background-position: right;
-    background-repeat: no-repeat;
     
-}
+} 
 
 .intro__info {
-    position: relative;
-    margin-top: 80px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: right;
+    background-image: url(../images/intro/intro_photo.jpg);
+    background-repeat: no-repeat;
+    margin-top: 170px;
     margin-bottom: 80px;
 
 }
 
 
 .intro__photo {
+    display: none;
     width: 100%;
-    position: absolute;
-    left: 0px;
+    vertical-align: top;
+
 }
 
 .intro__title{
-    position: relative;
+    
     font-weight: 700;
-    font-size: 30px;
-    padding:220px 40px 220px 660px;
+    font-size: 40px; 
+    max-width: 730px;
 }
 
 .intro__title-gray {
     color: #8491A0;
+    font-size: 65px;
     margin-bottom: 30px;
 }
 
 .intro__text {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
     line-height: 1.5;
-}
+    color: #FFF;
+} 
 
 /*Header*/ 
 
@@ -84,9 +110,7 @@ p {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: url(../images/header/backgroud.png);
-    background-position: right;
-    background-repeat: no-repeat;
+
 }
 
 .header__inner {
@@ -95,15 +119,18 @@ p {
     align-items: center;
 }
 
-.logo__img {
+.header__img {
     top: 70px;
     padding-left: 70px;
 }
 
 /*Nav*/
+
+
 .nav {
 
     font-size: 16px; 
+    margin-right: 70px;
 }
 
 .nav__link {
@@ -117,6 +144,78 @@ p {
 .nav__link:hover {
     background-color: #5221E6;
 }
+
+.nav-toggle {
+    display: none;
+}
+
+
+/*Nav toggle*/
+
+.nav-toggle {
+    width: 30px;
+    padding: 18px 0;
+    display: none;
+
+    font-size: 0;
+    color: transparent;
+
+    border: 0;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    top: 16px;
+    right: 30px;
+    z-index: 1;
+}
+
+.nav-toggle:focus {
+    outline: 0;
+} 
+
+.nav-toggle__item{
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #ababab;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+
+    transition: background .2s linear;
+}
+
+.nav-toggle.active .nav-toggle__item {
+    background: none;
+}
+
+.nav-toggle__item:before,
+.nav-toggle__item:after {
+    content: "";
+    width: 100%;
+    height: 4px;
+
+    background-color: #ababab;
+
+    position: absolute;
+    left: 0;
+    z-index: 1;
+
+    transition: transform .2s linear;
+}
+
+.nav-toggle__item:before{
+    top: -8px;
+}
+
+.nav-toggle__item:after{
+  bottom: -8px;  
+}
+
 
 
 /*Section*/
@@ -177,16 +276,16 @@ p {
 }
 
 
-.colortext-1 {
+.works__title-green {
     color: #3CC74E;
 }
 
-.colortext-2 {
+.works__title-blue {
     color: #609BFF;
 }
 
 
-.colortext-3 {
+.works__title-red {
     color: #E95D90;
 }
 
@@ -215,10 +314,14 @@ p {
 }
 
 
+.philosophy__info {
+    margin: 120px auto 120px;
+    padding: 0 70px;
+
+}
+
 .philosophy__title {
-
-    padding: 120px 70px 25px 65px;
-
+    margin-bottom: 25px;
     color: black;
     font-size: 55px;
     font-weight: 700;
@@ -229,9 +332,7 @@ p {
     color: #5B6876;
     font-size: 18px;
     line-height: 1.5;
-    margin-left: 70px;
-    margin-right: 70px;
-    margin-bottom: 135px;
+    margin-bottom: 135px;*/
     text-align: left;
     font-weight: 100;
 }
@@ -240,23 +341,29 @@ p {
 .philisophy__link {
     color: black;
     font-size: 14px;
-    margin-left: 70px;
     text-decoration: none;
 }
 
 .philisophy__link:after {
     content: "";
     display: block;
-    width: 115px;
+    width: 105px;
     height: 0.5px;
     background-color: black;
     margin-top: 5px;
-    margin-left: 70px;
+    transition: width 0.3s ease-in-out;
 }
+
+
+.philisophy__link:hover::after  {
+    width: 0;
+}
+
 
 .philisophy__img {
     width: 100%;
     height: 100%;
+    vertical-align: top;
 }
 
 
@@ -265,13 +372,15 @@ p {
 .skillset {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    
+    gap: 70px;
+  
 }
 
 
 .skillset__text {
-    margin-top: 25px;
-    padding-right: 70px;
+    line-height: 1.5;
+    padding-right: 35px;
+    text-align: left;
 }
 
 
@@ -294,6 +403,7 @@ p {
 
 .skills__text {
     font-size: 16px;
+    line-height: 1.5;
 }
 
 /*Icons*/
@@ -314,19 +424,23 @@ p {
 
 .project {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
     gap: 25px;
-   
     margin-bottom: 150px;
 }
 
-.project__card {
-
-    background-color: #181823;
+.project__column {
+    display: flex;
+    flex-direction: column;
 }
 
 
+
+.project__card {
+    margin-bottom: 25px;
+    background-color: #181823;
+    width: 100%
+}
 
 
 .project__title {
@@ -336,10 +450,23 @@ p {
     padding-left: 24px;
 }
 
+.project__photo {
+    vertical-align: top;
+}
+
 
 .project__text {
     padding: 8px 30px 40px 30px;
+    line-height: 1.5;
 }
+
+
+.project__button__place {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+}
+
 
 
 .project__button {
@@ -347,17 +474,31 @@ p {
     font-size: 18px;
     color: white;
     background-color: transparent;
-    margin-top: 90px;
-    margin-left: 220px;
     padding: 24px 32px;
     border: 1px solid #181823;
     cursor: pointer;
+    transition: .5s;
+}
+
+.project__button:hover {
+    background-color:  #5221E6;
+    
 }
 
 
 /*Instagram*/
 
-/*Philosophy*/
+
+/*
+
+
+
+.philosophy__info {
+    margin: 120px auto 120px;
+    padding: 0 70px;
+
+}*/
+
 
 .instagram {
     display: grid;
@@ -369,11 +510,15 @@ p {
 }
 
 
+.instagram__info {
+    margin: 120px auto 120px;
+    padding: 0 70px;
+}
+
+
+
 .instagram__title {
-    margin-top: 120px;
     margin-bottom: 25px;
-    padding-right: 70px;
-    padding-left: 65px;
     color: black;
     font-size: 55px;
     font-weight: 700;
@@ -384,8 +529,6 @@ p {
     color: #5B6876;
     font-size: 18px;
     line-height: 1.5;
-    margin-left: 70px;
-    margin-right: 70px;
     margin-bottom: 135px;
     text-align: left;
     font-weight: 100;
@@ -395,7 +538,6 @@ p {
 .instagram__link {
     color: black;
     font-size: 14px;
-    margin-left: 70px;
     text-decoration: none;
 }
 
@@ -406,8 +548,14 @@ p {
     height: 0.5px;
     background-color: black;
     margin-top: 5px;
-    margin-left: 70px;
+    transition: width 0.3s ease-in-out;
 }
+
+.instagram__link:hover::after {
+    width: 0;
+}
+
+
 
 .instagram__img {
     width: 100%;
@@ -444,6 +592,11 @@ p {
     height: 0.5px;
     background-color: #8491A0;
     margin-top: 5px;
+    transition: width 0.3s ease-in-out; 
+}
+
+.dribbble__link:hover::after {
+    width: 0;
 }
 
 
@@ -480,7 +633,14 @@ p {
     height: 0.5px;
     background-color: #8491A0;
     margin-top: 5px;
+    transition: width 0.3s ease-in-out;
 }
+
+
+.reviews__intro__link:hover::after {
+    width: 0;
+}
+
 
 .reviews__item {
     border: 1px solid #8491A0;
@@ -549,9 +709,22 @@ p {
     background-color:  #5221E6;
 }
 
-.photo__images{
+.photo__container {
     display: flex;
     justify-content: space-between;
+}
+
+
+.photo__image {
+    transition: 1s ;
+}
+
+
+.photo__image:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
 }
 
 /*Contact*/
@@ -586,6 +759,10 @@ p {
     width: 100%;
     height: 50px;
     border: none;
+    color: white;
+    font-size: 16px;
+    font-style: italic;
+    padding-left: 5px;
 }
 
 
@@ -596,6 +773,10 @@ p {
     height: 50px;
     border: none;
     min-height: 100px; 
+    color: white;
+    font-size: 16px;
+    font-style: italic;
+    padding-left: 5px;
 }
 
 
@@ -610,7 +791,16 @@ p {
     text-align: center;
     border: none;
     cursor: pointer;
+    transition: background-position .5s;
+    background: linear-gradient(90deg, #5221E6, #3913ad); 
+    background-size: 200% 100%;
 }
+
+
+.subscribe__btn:hover {
+    background-position: -100% 0;
+}
+
 
 
 /*Footer*/
@@ -625,7 +815,7 @@ p {
 .footer__columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 640px;
+    gap: 230px;
 }
 
 .footer__logo{
@@ -635,6 +825,7 @@ p {
 
 .footer__icons {
     margin-bottom: 140px;
+    cursor: pointer;
 }
 
 
@@ -648,7 +839,7 @@ p {
 .footer__links {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    max-width: 400px;
 }
 
 
@@ -657,16 +848,695 @@ p {
     text-decoration: none;
     font-size: 16px;
     text-align: left;
-    padding: 10px 40px 10px 0;
-    
+    transition: .5s;
 }
 
-.footer__link {
+.footer__nav:hover {
+    text-decoration: underline;
+}
+
+.footer__link:not(:last-child) {
     margin-bottom: 35px;
 }
 
+
+.links__column {
+    list-style: none;
+    max-width: 200px;
+}
 
 .copyright {
     color: #8491A0;
     font-size: 16px;
 }
+
+
+
+@media (max-width: 1200px) {
+
+    .container {
+        padding: 80px 15px 0 15px;
+    }
+
+
+    h1 {
+        font-size: 50px;
+    }
+
+     /*Intro*/
+
+     .intro__title-gray {
+        font-size: 45px;
+     }
+
+     .intro__info {
+        margin-bottom: 0;
+     }
+
+     .intro__text {
+        font-size: 14px;
+     }
+
+
+     .intro__text {
+        padding-right: 40px;
+     }
+
+     /*Section*/
+      .section__title {
+        font-size: 45px;
+      }
+    
+
+    /*Philosophy*/
+
+    .philosophy__text {
+        margin-bottom: 70px;
+    }
+
+   
+    .philisophy__link:after {
+        margin-bottom: 30px;
+    }
+
+    /*Icons*/
+
+    .icon__item {
+        padding: 45px 100px;
+    }
+
+
+    /*Project*/
+
+    .project__column {
+        max-width: 510px;
+    }
+
+    .section__projects {
+        max-width: 510px;
+    }
+
+
+    /*Instagram*/
+
+
+    .instagram__text {
+        margin-bottom: 70px;
+    }
+
+    .instagram__link:after  {
+        margin-bottom: 30px;
+    }
+
+    /*Reviews*/
+
+    .reviews {
+        gap: 25px;
+    }
+
+    .reviews__item {
+        margin-bottom: 80px;
+    }
+
+
+    /*Dribbble*/
+
+    .dribbble__text {
+        padding-right: 220px;
+    }
+
+    /*Photo*/
+
+    .photo__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        
+    }
+
+    .section__title {
+        font-size: 40px;
+    }
+    .project__card {
+        max-width:  508px;
+    }
+    .project__photo {
+        max-width: 508px;
+    }
+
+  
+}
+
+@media (max-width: 990px) {
+    /*Intro*/
+
+    h1 {
+        font-size: 60px;
+    }
+
+
+    .header__intro__background {
+        background: none;
+    }
+
+
+    .intro__info {
+        margin-bottom: 0;
+        
+    }
+
+    .intro__title-gray {
+        font-size: 55px;
+    
+    }
+
+
+    .intro__title {
+        padding: 217px 106px 220px 229px;
+        font-size: 55px;
+    }
+
+    .intro__text {
+        font-size: 16px;
+    }
+
+
+    .intro__photo {
+        opacity: .4;
+    }
+
+    .nav {
+        margin-right: 40px;
+    }
+
+    /*Philisophy*/
+
+    .philosophy__title {
+        font-size: 45px;
+       
+    }
+
+    .philosophy__text {
+
+        font-size: 16px;
+    }
+
+
+    /*Icons*/
+
+    .icon__item {
+        padding: 25px 70px;
+    }
+
+
+    /*Projects*/
+
+    .project__column {
+        max-width: 410px;
+    }
+
+    .project__photo {
+        max-width: 100%;
+    }
+
+
+
+    /*Instagram*/
+
+      .instagram__title {
+        font-size: 45px;
+    }
+
+    .instagram__text {
+
+        font-size: 16px;
+    }
+
+
+    /*Dribbble*/
+
+    .dribbble {
+        margin: 90px 100px;
+    }
+
+
+    .dribbble__link {
+        margin-bottom: 100px;
+    }
+
+    .dribbble__text {
+        padding-right: 220px;
+    }
+
+    /*Reviews*/
+
+
+    .reviews__info {
+        padding: 30px;
+    }
+
+    .reviews__text {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+
+    /*Photo*/
+
+    .photo__description {
+        padding-right: 440px;
+    }
+
+    .photo__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    
+
+    /*Contact*/
+
+    .contact {
+        padding: 0 80px;
+    }
+}
+
+
+
+@media (max-width: 770px) {
+
+
+    /*Container*/
+
+    .container {
+
+        padding: 80px 40px 0 40px;
+        
+    }
+
+
+    /*Intro*/
+
+    .header__intro__background {
+        background: none;
+    }
+
+   .intro__image {
+        display: none;
+   }
+
+   .intro__info {
+        background: url(../images/intro/intro_small.png);
+        background-repeat: no-repeat;
+        margin-bottom: 0;
+   }
+
+
+    .intro__title{
+        padding: 110px 80px 150px 281px;
+    }
+
+    .intro__text {
+        padding-right: 70px;
+    }
+
+    /*Section*/
+
+    .section__suptitle {
+
+        font-size: 16px;
+    }
+
+
+    .section__title {
+
+        font-size: 55px;
+    }
+
+    .section__narrow{
+        width: 90%;
+    }
+
+    .section__projects {
+        max-width: 100%;
+    }
+
+
+    /*Work experience*/
+
+    .work__experience {
+        margin-bottom: 90px;
+    }
+
+
+    .works__number {
+        font-size: 110px;
+    }
+
+
+
+    /*Philisophy*/
+
+
+    .philisophy__item:first-child {
+        background: url(../images/philisophy/background_philosophy.png);
+        background-repeat: no-repeat;
+    }
+
+    .philisophy__item:last-child{
+        background: url(../images/philisophy/philosophy_small.png);
+        background-repeat: no-repeat;
+    }
+    .philosophy__title {
+        font-size: 55px;
+        
+    }
+
+    
+
+    .philisophy__link {
+        font-size: 12px;
+        margin-bottom: 80px;
+    }
+
+    .philisophy__link:after{
+        width: 90px;
+        margin-bottom: 80px;
+    }
+
+
+    .philisophy__img {
+        display: none;
+    }
+
+    /*Skills*/
+
+    .skillset {
+        display: block;
+    }
+
+    .skills {
+        margin-top: 40px;
+        gap: 50px 70px;
+        margin-bottom: 80px;
+    }
+
+
+    /*Icons*/
+
+    .icons{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
+    .icon__item {
+       
+        align-items: center;
+        padding: 50px 100px;
+        
+    }
+
+
+    /*Project*/
+
+
+    .project {
+        display: block;
+        margin-bottom: 0;
+    }
+
+    .project__column {
+        max-width: 100%;
+    }
+
+
+    .project__card {
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .project__photo {
+        width: 100%;
+    }
+
+
+    .project__button {
+        display: none;
+    }
+
+
+    /*Dribbble*/
+
+
+    .dribbble{
+        margin: 80px 40px;
+    }
+
+    .dribbble__text {
+        padding: 0;
+    }
+
+    /*Reviews*/
+
+    .reviews__item {
+        margin-bottom: 60px;
+
+    }
+
+    /*Photo*/
+
+
+    .photo__description {
+        padding: 0;
+    }
+
+    .photo__container {
+        align-items: center;
+    }
+
+    .photo__image {
+        vertical-align: top;
+        width: 100%;
+    }
+
+
+    /*Contact*/
+
+
+    .contact {
+        padding: 0;
+    }
+
+}
+
+
+
+@media (max-width: 667px) {
+
+    /*header*/
+
+    .header {
+        height: 70px;
+        padding-top: 24px;
+    }
+
+
+    .nav__link {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    /*Intro*/
+
+    .intro__title {
+        padding: 105px 42px 150px 232px;
+    }
+
+
+}
+
+@media (max-width: 575px) {
+    /*Intro*/
+
+    .intro {
+        display: block;
+        background: url(../images/intro/intro_photo575\ square.jpg);
+        background-repeat: no-repeat;
+    
+        border-bottom: #ababab dotted 1px;
+        
+    }
+
+    .intro__info{
+        background: none;
+        position: static;
+    }
+
+    .intro__photo {
+        display: none;
+    }
+
+
+    .intro__title {
+        padding: 0;
+        position: static;
+        padding-top: 600px;
+        text-align: left;
+
+    }
+
+    h1 {
+        font-size: 48px;
+        padding: 0 20px
+    }
+
+    .intro__title-gray {
+        font-size: 48px;
+        padding: 0 20px
+    }
+
+
+    .intro__text {
+        font-size: 20px;
+        line-height: 1.5;
+        padding: 0 20px;
+        margin-bottom: 50px;
+    }
+
+    /*Section*/
+
+    .section {
+        margin-top: 50px;
+    }
+
+
+    .section__title {
+        font-size: 40px;
+    }
+
+    /*Work experience*/
+
+    .works__desc {
+        padding: 0;
+        font-size: 14px;
+    }
+
+    /*Philosophy*/
+
+
+    .philosophy {
+        display: block;
+        background-color: #fff3e4;
+        padding-top: 45px;
+    }
+
+   
+    .philosophy__info{
+        margin: 45px auto 90px;
+        padding: 0 20px;
+    }
+
+    .philisophy__img {
+        display: block;
+    }
+
+    .philosophy__title {
+        font-size: 45px;
+    }
+
+
+    .philosophy__text {
+        margin-bottom: 40px;
+    }
+
+
+    .philisophy__link:after{
+        width: 90px;
+        margin-bottom: 0;
+    }
+
+
+    /*Instagram*/
+
+    .instagram {
+        display: block;
+        background-color: #fbe4ff;
+    }
+
+
+    .instagram__info {
+        margin: 0;
+        padding: 45px 20px;
+    }
+
+    .instagram__img {
+        display: block;
+    }
+
+    .instagram__title {
+        font-size: 45px;
+    }
+
+
+    .instagram__text {
+        margin-bottom: 40px;
+    }
+
+
+    .instagram__link:after{
+        width: 90px;
+        margin-bottom: 0;
+        width: 110px;
+    }
+
+
+    /*Reviews*/
+
+    .reviews {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+
+
+    /*Photography*/
+
+    .photo__nav {
+        margin-right: 5px;
+    }
+
+
+    .photo__image:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: 1s ease;
+    }
+
+
+    /*Contact*/
+
+    .contact {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    .contact__form {
+        width: 100%;
+    }
+
+
+    /*Footer*/
+
+    .footer__columns {
+        gap: 25px;
+    }
+
+}
+
