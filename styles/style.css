@@ -34,7 +34,7 @@ p {
     max-width: 1300px;
     margin: 0 auto;
 
-    margin-top: 120px;
+    padding-top: 120px;
 }
 
 
@@ -53,34 +53,38 @@ p {
     background-repeat: no-repeat;
 }
 
-
 .intro {
     width: 100%;
     min-height: 100vh;
     display: flex;
     
-}
+} 
 
 .intro__info {
-    position: relative;
-    margin-top: 80px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: right;
+    background-image: url(../images/intro/intro_photo.jpg);
+    background-repeat: no-repeat;
+    margin-top: 170px;
     margin-bottom: 80px;
 
 }
 
 
 .intro__photo {
+    display: none;
     width: 100%;
-    position: absolute;
-    left: 0px;
-    top: 80px;
+    vertical-align: top;
+
 }
 
 .intro__title{
-    position: relative;
+    
     font-weight: 700;
-    font-size: 40px;
-    padding:220px 42px 220px 660px;
+    font-size: 40px; 
+    max-width: 730px;
 }
 
 .intro__title-gray {
@@ -94,7 +98,7 @@ p {
     font-weight: 300;
     line-height: 1.5;
     color: #FFF;
-}
+} 
 
 /*Header*/ 
 
@@ -121,9 +125,12 @@ p {
 }
 
 /*Nav*/
+
+
 .nav {
 
     font-size: 16px; 
+    margin-right: 70px;
 }
 
 .nav__link {
@@ -269,16 +276,16 @@ p {
 }
 
 
-.text-color_green {
+.works__title-green {
     color: #3CC74E;
 }
 
-.text-color_blue {
+.works__title-blue {
     color: #609BFF;
 }
 
 
-.text-color_red {
+.works__title-red {
     color: #E95D90;
 }
 
@@ -307,10 +314,14 @@ p {
 }
 
 
+.philosophy__info {
+    margin: 120px auto 120px;
+    padding: 0 70px;
+
+}
+
 .philosophy__title {
-
-    padding: 120px 70px 25px 65px;
-
+    margin-bottom: 25px;
     color: black;
     font-size: 55px;
     font-weight: 700;
@@ -321,9 +332,7 @@ p {
     color: #5B6876;
     font-size: 18px;
     line-height: 1.5;
-    margin-left: 70px;
-    margin-right: 70px;
-    margin-bottom: 135px;
+    margin-bottom: 135px;*/
     text-align: left;
     font-weight: 100;
 }
@@ -332,19 +341,24 @@ p {
 .philisophy__link {
     color: black;
     font-size: 14px;
-    margin-left: 70px;
     text-decoration: none;
 }
 
 .philisophy__link:after {
     content: "";
     display: block;
-    width: 115px;
+    width: 105px;
     height: 0.5px;
     background-color: black;
     margin-top: 5px;
-    margin-left: 70px;
+    transition: width 0.3s ease-in-out;
 }
+
+
+.philisophy__link:hover::after  {
+    width: 0;
+}
+
 
 .philisophy__img {
     width: 100%;
@@ -358,13 +372,15 @@ p {
 .skillset {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    
+    gap: 70px;
+  
 }
 
 
 .skillset__text {
-    margin-top: 25px;
-    padding-right: 70px;
+    line-height: 1.5;
+    padding-right: 35px;
+    text-align: left;
 }
 
 
@@ -387,6 +403,7 @@ p {
 
 .skills__text {
     font-size: 16px;
+    line-height: 1.5;
 }
 
 /*Icons*/
@@ -412,8 +429,15 @@ p {
     margin-bottom: 150px;
 }
 
-.project__card {
+.project__column {
+    display: flex;
+    flex-direction: column;
+}
 
+
+
+.project__card {
+    margin-bottom: 25px;
     background-color: #181823;
     width: 100%
 }
@@ -431,11 +455,18 @@ p {
 }
 
 
-
-
 .project__text {
     padding: 8px 30px 40px 30px;
+    line-height: 1.5;
 }
+
+
+.project__button__place {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+}
+
 
 
 .project__button {
@@ -443,15 +474,30 @@ p {
     font-size: 18px;
     color: white;
     background-color: transparent;
-    margin-top: 90px;
-    margin-left: 220px;
     padding: 24px 32px;
     border: 1px solid #181823;
     cursor: pointer;
+    transition: .5s;
+}
+
+.project__button:hover {
+    background-color:  #5221E6;
+    
 }
 
 
 /*Instagram*/
+
+
+/*
+
+
+
+.philosophy__info {
+    margin: 120px auto 120px;
+    padding: 0 70px;
+
+}*/
 
 
 .instagram {
@@ -464,11 +510,15 @@ p {
 }
 
 
+.instagram__info {
+    margin: 120px auto 120px;
+    padding: 0 70px;
+}
+
+
+
 .instagram__title {
-    margin-top: 120px;
     margin-bottom: 25px;
-    padding-right: 70px;
-    padding-left: 65px;
     color: black;
     font-size: 55px;
     font-weight: 700;
@@ -479,8 +529,6 @@ p {
     color: #5B6876;
     font-size: 18px;
     line-height: 1.5;
-    margin-left: 70px;
-    margin-right: 70px;
     margin-bottom: 135px;
     text-align: left;
     font-weight: 100;
@@ -490,7 +538,6 @@ p {
 .instagram__link {
     color: black;
     font-size: 14px;
-    margin-left: 70px;
     text-decoration: none;
 }
 
@@ -501,8 +548,14 @@ p {
     height: 0.5px;
     background-color: black;
     margin-top: 5px;
-    margin-left: 70px;
+    transition: width 0.3s ease-in-out;
 }
+
+.instagram__link:hover::after {
+    width: 0;
+}
+
+
 
 .instagram__img {
     width: 100%;
@@ -539,6 +592,11 @@ p {
     height: 0.5px;
     background-color: #8491A0;
     margin-top: 5px;
+    transition: width 0.3s ease-in-out; 
+}
+
+.dribbble__link:hover::after {
+    width: 0;
 }
 
 
@@ -575,7 +633,14 @@ p {
     height: 0.5px;
     background-color: #8491A0;
     margin-top: 5px;
+    transition: width 0.3s ease-in-out;
 }
+
+
+.reviews__intro__link:hover::after {
+    width: 0;
+}
+
 
 .reviews__item {
     border: 1px solid #8491A0;
@@ -650,12 +715,12 @@ p {
 }
 
 
-.photo__images {
+.photo__image {
     transition: 1s ;
 }
 
 
-.photo__images:hover {
+.photo__image:hover {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
@@ -726,7 +791,16 @@ p {
     text-align: center;
     border: none;
     cursor: pointer;
+    transition: background-position .5s;
+    background: linear-gradient(90deg, #5221E6, #3913ad); 
+    background-size: 200% 100%;
 }
+
+
+.subscribe__btn:hover {
+    background-position: -100% 0;
+}
+
 
 
 /*Footer*/
@@ -751,6 +825,7 @@ p {
 
 .footer__icons {
     margin-bottom: 140px;
+    cursor: pointer;
 }
 
 
@@ -773,7 +848,11 @@ p {
     text-decoration: none;
     font-size: 16px;
     text-align: left;
+    transition: .5s;
+}
 
+.footer__nav:hover {
+    text-decoration: underline;
 }
 
 .footer__link:not(:last-child) {
@@ -782,6 +861,7 @@ p {
 
 
 .links__column {
+    list-style: none;
     max-width: 200px;
 }
 
@@ -795,7 +875,7 @@ p {
 @media (max-width: 1200px) {
 
     .container {
-        padding: 0 15px;;
+        padding: 80px 15px 0 15px;
     }
 
 
@@ -856,9 +936,6 @@ p {
         max-width: 510px;
     }
 
-    .project__button {
-        margin-left: 150px;
-    }
 
     /*Instagram*/
 
@@ -948,12 +1025,15 @@ p {
         opacity: .4;
     }
 
+    .nav {
+        margin-right: 40px;
+    }
 
     /*Philisophy*/
 
     .philosophy__title {
         font-size: 45px;
-        padding: 100px 60px 25px 65px;
+       
     }
 
     .philosophy__text {
@@ -979,16 +1059,12 @@ p {
         max-width: 100%;
     }
 
-    .project__button {
-        margin-left: 100px;
-    }
 
 
-      /*Instagram*/
+    /*Instagram*/
 
       .instagram__title {
         font-size: 45px;
-        margin-top: 90px;
     }
 
     .instagram__text {
@@ -1054,8 +1130,8 @@ p {
     /*Container*/
 
     .container {
-        margin-top: 80px;
-        padding: 0 40px 0 40px;
+
+        padding: 80px 40px 0 40px;
         
     }
 
@@ -1107,7 +1183,7 @@ p {
     }
 
 
-    /*work experience*/
+    /*Work experience*/
 
     .work__experience {
         margin-bottom: 90px;
@@ -1134,12 +1210,10 @@ p {
     }
     .philosophy__title {
         font-size: 55px;
-        padding: 80px 40px 25px 40px
+        
     }
 
-    .philosophy__text {
-        margin: 0 40px 70px 40px;
-    }
+    
 
     .philisophy__link {
         font-size: 12px;
@@ -1242,7 +1316,7 @@ p {
         align-items: center;
     }
 
-    .photo__images {
+    .photo__image {
         vertical-align: top;
         width: 100%;
     }
@@ -1358,10 +1432,13 @@ p {
     .philosophy {
         display: block;
         background-color: #fff3e4;
+        padding-top: 45px;
     }
 
-    .philisophy__item:first-child{
-        margin-bottom: 80px;
+   
+    .philosophy__info{
+        margin: 45px auto 90px;
+        padding: 0 20px;
     }
 
     .philisophy__img {
@@ -1389,12 +1466,12 @@ p {
     .instagram {
         display: block;
         background-color: #fbe4ff;
-        margin-top: 80px;
     }
 
-    .instagram__item:first-child{
-        margin-bottom: 80px;
-    
+
+    .instagram__info {
+        margin: 0;
+        padding: 45px 20px;
     }
 
     .instagram__img {
@@ -1403,7 +1480,6 @@ p {
 
     .instagram__title {
         font-size: 45px;
-        padding-top: 80px;
     }
 
 
@@ -1435,7 +1511,7 @@ p {
     }
 
 
-    .photo__images:hover {
+    .photo__image:hover {
         -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
         transform: scale(1.1);
