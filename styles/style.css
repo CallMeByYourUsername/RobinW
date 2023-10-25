@@ -16,9 +16,11 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+
 h1 {
     font-size: 70px;
 }
+
 
 p {
     font-size: 18px;
@@ -44,7 +46,6 @@ p {
 
 
 /*Intro*/
-
 
 .header__intro__background{
     background: url(../images/header/backgroud.png);
@@ -100,8 +101,8 @@ p {
     color: #FFF;
 } 
 
-/*Header*/ 
 
+/*Header*/ 
 
 .header {
     width: 100%;
@@ -110,7 +111,6 @@ p {
     left: 0;
     right: 0;
     z-index: 1000;
-
 }
 
 .header__inner {
@@ -124,9 +124,8 @@ p {
     padding-left: 70px;
 }
 
+
 /*Nav*/
-
-
 .nav {
 
     font-size: 16px; 
@@ -144,11 +143,6 @@ p {
 .nav__link:hover {
     background-color: #5221E6;
 }
-
-.nav-toggle {
-    display: none;
-}
-
 
 /*Nav toggle*/
 
@@ -276,6 +270,7 @@ p {
 }
 
 
+
 .works__title-green {
     color: #3CC74E;
 }
@@ -309,7 +304,8 @@ p {
     grid-template-columns: 1fr 1fr;
 }
 
-.philisophy__item {
+
+.philosophy__item {
     background: url(../images/philisophy/background_philosophy.png);
 }
 
@@ -332,19 +328,19 @@ p {
     color: #5B6876;
     font-size: 18px;
     line-height: 1.5;
-    margin-bottom: 135px;*/
+    margin-bottom: 135px;
     text-align: left;
     font-weight: 100;
 }
 
 
-.philisophy__link {
+.philosophy__link {
     color: black;
     font-size: 14px;
     text-decoration: none;
 }
 
-.philisophy__link:after {
+.philosophy__link:after {
     content: "";
     display: block;
     width: 105px;
@@ -355,17 +351,16 @@ p {
 }
 
 
-.philisophy__link:hover::after  {
+.philosophy__link:hover::after  {
     width: 0;
 }
 
 
-.philisophy__img {
+.philosophy__img {
     width: 100%;
     height: 100%;
     vertical-align: top;
 }
-
 
 /*Skillset*/
 
@@ -421,7 +416,6 @@ p {
 
 
 /*Project*/
-
 .project {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -484,21 +478,11 @@ p {
     background-color:  #5221E6;
     
 }
+ 
+
 
 
 /*Instagram*/
-
-
-/*
-
-
-
-.philosophy__info {
-    margin: 120px auto 120px;
-    padding: 0 70px;
-
-}*/
-
 
 .instagram {
     display: grid;
@@ -584,7 +568,6 @@ p {
     margin-bottom: 120px;
 }
 
-
 .dribbble__link:after {
     content: "";
     display: block;
@@ -624,7 +607,6 @@ p {
     color: #FFF;
     text-decoration: none;
 }
-
 
 .reviews__intro__link:after {
     content: "";
@@ -670,6 +652,7 @@ p {
     margin-bottom: 5px;
 
 }
+
 
 
 
@@ -743,12 +726,6 @@ p {
 .form__title {
     font-size: 16px;
     color: #FFF;
-}
-
-
-
-.form__title {
-    font-size: 16px;
     margin-bottom: 10px;
 }
 
@@ -780,6 +757,8 @@ p {
 }
 
 
+
+
 .subscribe__btn{
     width: 100%;
     background-color:  #5221E6;
@@ -803,9 +782,8 @@ p {
 
 
 
+
 /*Footer*/
-
-
 .footer{ 
     padding: 80px 70px;
     background-color: #181823;
@@ -864,6 +842,11 @@ p {
     list-style: none;
     max-width: 200px;
 }
+
+
+
+
+
 
 .copyright {
     color: #8491A0;
@@ -1533,10 +1516,738 @@ p {
 
 
     /*Footer*/
+.footer{ 
+    padding: 80px 70px;
+    background-color: #181823;
+}
+
+
+.footer__columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 230px;
+}
+
+.footer__logo{
+    margin-bottom: 35px;
+}
+
+
+.footer__icons {
+    margin-bottom: 140px;
+    cursor: pointer;
+}
+
+
+
+.footer__icon {
+    margin-right: 15px;
+}
+
+
+
+.footer__links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 400px;
+}
+
+
+.footer__nav {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: left;
+    transition: .5s;
+}
+
+.footer__nav:hover {
+    text-decoration: underline;
+}
+
+.footer__link:not(:last-child) {
+    margin-bottom: 35px;
+}
+
+
+.links__column {
+    list-style: none;
+    max-width: 200px;
+}
+
+
+.copyright {
+    color: #8491A0;
+    font-size: 16px;
+}
+
+
+@media (max-width: 1200px) {
+
+    .container {
+        padding: 80px 15px 0 15px;
+    }
+
+
+    h1 {
+        font-size: 50px;
+    }
+
+     /*Intro*/
+
+     .intro__title-gray {
+        font-size: 45px;
+     }
+
+     .intro__info {
+        margin-bottom: 0;
+     }
+
+     .intro__text {
+        font-size: 14px;
+     }
+
+
+     .intro__text {
+        padding-right: 40px;
+     }
+
+     /*Section*/
+      .section__title {
+        font-size: 45px;
+      }
+    
+
+    /*Philosophy*/
+
+    .philosophy__text {
+        margin-bottom: 70px;
+    }
+
+   
+    .philisophy__link:after {
+        margin-bottom: 30px;
+    }
+
+    /*Icons*/
+
+    .icon__item {
+        padding: 45px 100px;
+    }
+
+
+    /*Project*/
+
+    .project__column {
+        max-width: 510px;
+    }
+
+    .section__projects {
+        max-width: 510px;
+    }
+
+
+    /*Instagram*/
+
+
+    .instagram__text {
+        margin-bottom: 70px;
+    }
+
+    .instagram__link:after  {
+        margin-bottom: 30px;
+    }
+
+    /*Reviews*/
+
+    .reviews {
+        gap: 25px;
+    }
+
+    .reviews__item {
+        margin-bottom: 80px;
+    }
+
+
+    /*Dribbble*/
+
+    .dribbble__text {
+        padding-right: 220px;
+    }
+
+    /*Photo*/
+
+    .photo__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        
+    }
+
+    .section__title {
+        font-size: 40px;
+    }
+    .project__card {
+        max-width:  508px;
+    }
+    .project__photo {
+        max-width: 508px;
+    }
+
+  
+}
+
+@media (max-width: 990px) {
+    /*Intro*/
+
+    h1 {
+        font-size: 60px;
+    }
+
+
+    .header__intro__background {
+        background: none;
+    }
+
+
+    .intro__info {
+        margin-bottom: 0;
+        
+    }
+
+    .intro__title-gray {
+        font-size: 55px;
+    
+    }
+
+
+    .intro__title {
+        padding: 217px 106px 220px 229px;
+        font-size: 55px;
+    }
+
+    .intro__text {
+        font-size: 16px;
+    }
+
+
+    .intro__photo {
+        opacity: .4;
+    }
+
+    .nav {
+        margin-right: 40px;
+    }
+
+    /*Philisophy*/
+
+    .philosophy__title {
+        font-size: 45px;
+       
+    }
+
+    .philosophy__text {
+
+        font-size: 16px;
+    }
+
+
+    /*Icons*/
+
+    .icon__item {
+        padding: 25px 70px;
+    }
+
+
+    /*Projects*/
+
+    .project__column {
+        max-width: 410px;
+    }
+
+    .project__photo {
+        max-width: 100%;
+    }
+
+
+
+    /*Instagram*/
+
+      .instagram__title {
+        font-size: 45px;
+    }
+
+    .instagram__text {
+
+        font-size: 16px;
+    }
+
+
+    /*Dribbble*/
+
+    .dribbble {
+        margin: 90px 100px;
+    }
+
+
+    .dribbble__link {
+        margin-bottom: 100px;
+    }
+
+    .dribbble__text {
+        padding-right: 220px;
+    }
+
+    /*Reviews*/
+
+
+    .reviews__info {
+        padding: 30px;
+    }
+
+    .reviews__text {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+
+    /*Photo*/
+
+    .photo__description {
+        padding-right: 440px;
+    }
+
+    .photo__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    
+
+    /*Contact*/
+
+    .contact {
+        padding: 0 80px;
+    }
+}
+
+
+
+@media (max-width: 770px) {
+
+
+    /*Container*/
+
+    .container {
+
+        padding: 80px 40px 0 40px;
+        
+    }
+
+
+    /*Intro*/
+
+    .header__intro__background {
+        background: none;
+    }
+
+   .intro__image {
+        display: none;
+   }
+
+   .intro__info {
+        background: url(../images/intro/intro_small.png);
+        background-repeat: no-repeat;
+        margin-bottom: 0;
+   }
+
+
+    .intro__title{
+        padding: 110px 80px 150px 281px;
+    }
+
+    .intro__text {
+        padding-right: 70px;
+    }
+
+    /*Section*/
+
+    .section__suptitle {
+
+        font-size: 16px;
+    }
+
+
+    .section__title {
+
+        font-size: 55px;
+    }
+
+    .section__narrow{
+        width: 90%;
+    }
+
+    .section__projects {
+        max-width: 100%;
+    }
+
+
+    /*Work experience*/
+
+    .work__experience {
+        margin-bottom: 90px;
+    }
+
+
+    .works__number {
+        font-size: 110px;
+    }
+
+
+
+    /*Philisophy*/
+
+
+    .philisophy__item:first-child {
+        background: url(../images/philisophy/background_philosophy.png);
+        background-repeat: no-repeat;
+    }
+
+    .philisophy__item:last-child{
+        background: url(../images/philisophy/philosophy_small.png);
+        background-repeat: no-repeat;
+    }
+    .philosophy__title {
+        font-size: 55px;
+        
+    }
+
+    
+
+    .philisophy__link {
+        font-size: 12px;
+        margin-bottom: 80px;
+    }
+
+    .philisophy__link:after{
+        width: 90px;
+        margin-bottom: 80px;
+    }
+
+
+    .philisophy__img {
+        display: none;
+    }
+
+    /*Skills*/
+
+    .skillset {
+        display: block;
+    }
+
+    .skills {
+        margin-top: 40px;
+        gap: 50px 70px;
+        margin-bottom: 80px;
+    }
+
+
+    /*Icons*/
+
+    .icons{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
+    .icon__item {
+       
+        align-items: center;
+        padding: 50px 100px;
+        
+    }
+
+
+    /*Project*/
+
+
+    .project {
+        display: block;
+        margin-bottom: 0;
+    }
+
+    .project__column {
+        max-width: 100%;
+    }
+
+
+    .project__card {
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .project__photo {
+        width: 100%;
+    }
+
+
+    .project__button {
+        display: none;
+    }
+
+
+    /*Dribbble*/
+
+
+    .dribbble{
+        margin: 80px 40px;
+    }
+
+    .dribbble__text {
+        padding: 0;
+    }
+
+    /*Reviews*/
+
+    .reviews__item {
+        margin-bottom: 60px;
+
+    }
+
+    /*Photo*/
+
+
+    .photo__description {
+        padding: 0;
+    }
+
+    .photo__container {
+        align-items: center;
+    }
+
+    .photo__image {
+        vertical-align: top;
+        width: 100%;
+    }
+
+
+    /*Contact*/
+
+
+    .contact {
+        padding: 0;
+    }
+
+}
+
+
+
+@media (max-width: 667px) {
+
+    /*header*/
+
+    .header {
+        height: 70px;
+        padding-top: 24px;
+    }
+
+
+    .nav__link {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    /*Intro*/
+
+    .intro__title {
+        padding: 105px 42px 150px 232px;
+    }
+
+
+}
+
+@media (max-width: 575px) {
+    /*Intro*/
+
+    .intro {
+        display: block;
+        background: url(../images/intro/intro_photo575\ square.jpg);
+        background-repeat: no-repeat;
+    
+        border-bottom: #ababab dotted 1px;
+        
+    }
+
+    .intro__info{
+        background: none;
+        position: static;
+    }
+
+    .intro__photo {
+        display: none;
+    }
+
+
+    .intro__title {
+        padding: 0;
+        position: static;
+        padding-top: 600px;
+        text-align: left;
+
+    }
+
+    h1 {
+        font-size: 48px;
+        padding: 0 20px
+    }
+
+    .intro__title-gray {
+        font-size: 48px;
+        padding: 0 20px
+    }
+
+
+    .intro__text {
+        font-size: 20px;
+        line-height: 1.5;
+        padding: 0 20px;
+        margin-bottom: 50px;
+    }
+
+    /*Section*/
+
+    .section {
+        margin-top: 50px;
+    }
+
+
+    .section__title {
+        font-size: 40px;
+    }
+
+    /*Work experience*/
+
+    .works__desc {
+        padding: 0;
+        font-size: 14px;
+    }
+
+    /*Philosophy*/
+
+
+    .philosophy {
+        display: block;
+        background-color: #fff3e4;
+        padding-top: 45px;
+    }
+
+   
+    .philosophy__info{
+        margin: 45px auto 90px;
+        padding: 0 20px;
+    }
+
+    .philisophy__img {
+        display: block;
+    }
+
+    .philosophy__title {
+        font-size: 45px;
+    }
+
+
+    .philosophy__text {
+        margin-bottom: 40px;
+    }
+
+
+    .philisophy__link:after{
+        width: 90px;
+        margin-bottom: 0;
+    }
+
+
+    /*Instagram*/
+
+    .instagram {
+        display: block;
+        background-color: #fbe4ff;
+    }
+
+
+    .instagram__info {
+        margin: 0;
+        padding: 45px 20px;
+    }
+
+    .instagram__img {
+        display: block;
+    }
+
+    .instagram__title {
+        font-size: 45px;
+    }
+
+
+    .instagram__text {
+        margin-bottom: 40px;
+    }
+
+
+    .instagram__link:after{
+        width: 90px;
+        margin-bottom: 0;
+        width: 110px;
+    }
+
+
+    /*Reviews*/
+
+    .reviews {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+
+
+    /*Photography*/
+
+    .photo__nav {
+        margin-right: 5px;
+    }
+
+
+    .photo__image:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: 1s ease;
+    }
+
+
+    /*Contact*/
+
+    .contact {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    .contact__form {
+        width: 100%;
+    }
+
+
+    /*Footer*/
 
     .footer__columns {
         gap: 25px;
     }
 
 }
+
 
